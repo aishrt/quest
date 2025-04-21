@@ -1,0 +1,333 @@
+// Write a function to check if a number is even or odd.
+// const numberValue = prompt("Enter number : ");
+// const numType = (num)=>{
+//     if(num % 2 === 0){
+//         console.log(`\n\n${num} is an even number`)
+//     }else{
+//         console.log(`\n\n${num} is an odd number`)
+//     }
+// }
+// const value = numType(numberValue)
+
+// Write a function that reverses a string without using built-in reverse.
+// const strInput = prompt("Enter a string : ");
+// function reverse(str){
+//     let val = ""
+//     for(let i = str.length - 1;i>=0;i--){
+//         val += str[i];
+//     }
+//     return val;
+// }
+// const result = console.log(reverse(strInput))
+
+// Swap two variables without using a third variable.
+
+// let a = 1;
+// let b = 2;
+// a = a+b;
+// b = a-b;
+// a = a-b;
+
+// console.log(`a = ${a}\nb = ${b}`)
+
+// Write a function that counts the vowels in a given string.
+// const input = prompt("Enter string : ");
+// const count = function(str){
+//     let count = 0
+//     for(let i = 0 ; i < str.length ; i ++){
+//         if(str[i] === "a" ||str[i] === "e" ||str[i] === "i" ||str[i] === "o" ||str[i] === "u" ||str[i] === "A" ||str[i] === "E" ||str[i] === "I" ||str[i] === "O" ||str[i] === "U" ){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log("The total number of vovel in string : ",count(input))
+
+// Write a function to remove all falsy values from an array.
+// let arr = [0,null, undefined , "" , 11 , "aish" , -1]
+// function checkArray(){
+//     let val = arr.filter(Boolean);
+//     return val ;
+// }
+// console.log(checkArray(arr))
+
+// Implement a function to flatten a nested array.
+// let arr = [1,2,[3,4,[5,[6,7,[,8,[9,[10]]]]]]]
+// console.log("Flattened array = ",arr.flat(Infinity))
+
+// Write a function to find the second largest number in an array.
+// let arr = [1,2,6,7,3,4,55,66666,7,8,9,110];
+// let max = -Infinity;
+// let secondMax = -Infinity;
+
+// for(let i = 0;i<arr.length ;i++){
+//     if(arr[i] > max){
+//         secondMax = max;
+//         max = arr[i];
+//     }else if(arr[i] > secondMax && arr[i] != max){
+//         secondMax = arr[i];
+//     }
+// }
+// console.log("Second Max : ",secondMax)
+
+// Remove duplicates from an array.
+// let arr = [1,2,3,4,1,2,3,4,1,2,3,4,5];
+// function remove(ary){
+//     let unique = [];
+//     for (let i = 0 ; i <ary.length;i++){
+//         let duplicate = false;
+//         for(let j = 0 ; j<unique.length ; j++){
+//             if(ary[i] == unique[j]){
+//                 duplicate = true;
+//             }
+//         }
+//         if(!duplicate){
+//             unique.push(ary[i])
+//         }
+//     }
+//     return unique;
+// }
+
+// function remove(ary){
+//     let unique = [];
+//     for(let i = 0 ; i < ary.length; i++){
+//         let count = 0  ;
+//         for(let j = 0 ; j < ary.length ; j++){
+//             if(ary[i] == ary[j]){
+//                 count++; 
+//             }
+//         }
+//         if(count == 1){
+//             unique.push(ary[i])
+//         }
+//     }
+//     return unique;
+// }
+// console.log(remove(arr))
+
+// Write a function to chunk an array into smaller arrays of a given size.
+// const arry = [1,2,3,4,5,5,6,7,8,9,10,11,23,23,34,44,55,66,77]
+//  function chuncker(arr, size){
+//      let response = [];
+//      for(let i = 0 ; i<= arr.length ; i+=size){
+//          response.push(arr.slice(i, i+size));
+//      }
+//      return response;
+//  }
+//  console.log(chuncker(arry , 8))
+
+// Write a function to compare two objects for deep equality.
+// let a = {
+//     name:"Aish",
+//     age:"21",
+//     subject:{
+//         maths:100,
+//         english:100
+//     }
+// }
+// let b = {
+//     name:"Aish",
+//     age:"21",
+//     subject:{
+//         maths:100,
+//         english:100
+//     }
+// }
+
+
+// function validate(obj1, obj2){
+//     if(obj1 === obj2)return true;
+//     if(obj1 ===null || obj2===null || typeof obj1 !== "object" || typeof obj2 !== "object") return false;
+//     let key1= Object.keys(obj1);
+//     let key2 = Object.keys(obj2);
+//     if(key1.length !== key2.length) return false;
+//     for(let key of key1){
+//         if(!key2.includes(key) || !validate(obj1[key], obj2[key])) return false;
+//     }
+//     return true
+    
+// }
+
+// const value = validate(a,b)
+// if(value){
+//     console.log("Yes!, both boject are deeply same");
+// }else{
+//     console.log("No!, both boject are not same");
+// }
+
+// Convert a nested object to a flat object.
+
+// Implement a function that inverts the key-value pairs in an object.
+// let obj = {
+//     name:"aish",
+//     age:25,
+//     subject:"maths"
+// }
+// let newObj = {};
+// for(let key in obj){
+//     newObj[obj[key]]=key
+// }
+
+    
+// console.log(newObj)
+// Create a function that only runs once (singleton pattern).
+// function start(){
+//     if(start.isOn){
+//         console.log("Funtion is already initiated.")
+//         return ;
+//     }else{
+//         console.log("Function Initiated.......")
+//         start.isOn = true;
+//     }
+// }
+// let intervals = setInterval(()=>(
+//     start()),1000)
+// setInterval(()=>(clearInterval(intervals)),5000)
+
+// Use destructuring to extract values from an object and an array.
+
+// const user = {
+//   name: 'Aishwarya',
+//   age: 25,
+//   address: {
+//     city: 'Chandigarh',
+//     zip: 160036
+//   }
+// };
+// const {name  , age  , address: { city }} = user
+// console.log(`Hi ! , my name is ${name}, and I'm ${age} year old also I hails from ${city}`)
+
+
+// const arr = [1,2,3,4,5,6,7,8,9,0];
+// const [a , b , ,d , ...remian] = arr
+// console.log({a , b , d , remian})
+
+
+
+// Create a function using rest and spread operators.
+
+// function addAll(...num){
+//     const additional = [5,5];
+//     const allVal = [...num , ...additional];
+//     let total = 0;
+//     for(let numb of allVal){
+//         total += numb;
+//     }
+//     return total;
+// }
+
+// const addition = addAll(1,2,3)
+// console.log("Result : ",addition)
+
+// Use arrow functions and show the difference in this vs normal functions.
+// const user = {
+//   name: 'Aishwarya',
+//   sayHello: () => {
+//     console.log(`Hello, I am ${this.name}`);
+//   },
+//   sayBy: function(){
+//      console.log(`By by , I am ${this.name}`);
+//   }
+// };
+// user.sayHello(); 
+// user.sayBy(); 
+// function Timer() {
+//   this.seconds = 0;
+//   setInterval(function () {
+//     this.seconds++;
+//     console.log(this.seconds);
+//   }, 1000);
+// }
+
+// new Timer(); // NaN, because `this` inside setInterval is not the Timer instance
+// function Timer() {
+//   this.seconds = 0;
+//   setInterval(() => {
+//     this.seconds++;
+//     console.log(this.seconds);
+//   }, 1000);
+// }
+
+// new Timer(); // Logs 1, 2, 3...
+
+
+
+
+// Use Set and Map to solve a problem like counting unique items.
+// let arr = [1,2,3,4,1,2,3,4,1,2,3,4,5];
+// // let uniqueItems = [...new Set(arr)];
+// // console.log(uniqueItems)
+// let obj = new Map();
+
+// arr.forEach(item => {
+//   obj.set(item, (countMap.get(item) || 0) + 1);
+// });
+// // .set(key, value)  Adds a new key-value pair
+// // .get(key) Retrieves the value by key
+// // .has(key) Checks if a key exists
+// // .delete(key)  Removes a key
+// // .clear()  Removes all entries
+// // .size Returns the number of items
+
+
+// console.log('Frequencies:',countMap);
+// countMap.forEach((value, key) => {
+//   console.log(`${key} appears ${value} times`);
+// });
+
+// Merge two objects deeply and handle nested conflicts.
+// Create a currying function.
+
+// ============================
+// Explain the difference between slice() and splice() methods in arrays.
+let arr = [1,2,3,4,1,2,3,4,1,2,3,4,5];
+arr.slice(2)
+console.log("Result : ",arr)
+// What is the purpose of the map() method in arrays?
+// What does the reduce() method do in an array?
+// 4 .How do you find the index of 30 in an array?
+// const array = [10, 20, 30, 40, 50];
+// 5.How do we use filter and find 
+// 6.Make a deep and shallow copy of a obj
+// Let array = [1,55,33,7,6,99,3,343,90] sort this in asc, desc order
+// what is difference between object.entries and object .value
+// Why do we use reduce
+// 10.with help of loop iterate the obj 
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   id: 5566,
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
